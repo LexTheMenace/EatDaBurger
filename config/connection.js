@@ -1,11 +1,11 @@
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
-  host: "localhost",
+  host: "us-cdbr-east-02.cleardb.com",
   port: 3306,
-  user: "root",
-  password: "",
-  database: "burgers_db"
+  user: "b7258238403bd1",
+  password: "d37240dc",
+  database: "heroku_d17f969daa1a53a"
 });
 
 connection.connect(function (err) {
@@ -17,3 +17,6 @@ connection.connect(function (err) {
 });
 
 module.exports = connection;
+
+
+mysql://:@/?reconnect=true
