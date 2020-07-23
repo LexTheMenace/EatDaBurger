@@ -1,0 +1,22 @@
+  <div id="uneaten">
+    <h2> Eat A Burger! </h2>
+    <p>Click on a Burger to eat!</p>
+    {{#each burgers}}
+    {{#unless devoured}}
+    <form action="/api/burgers/{{this.id}}" method="PUT">
+      <button type="submit">{{this.burger_name}}</button>
+    </form>
+    {{/unless}}
+    {{/each}}
+   </div>
+  <div id="eaten">
+   <h2> Burgers You've Eaten! </h2>
+    {{#each burgers}}
+     {{#if devoured}}
+      <button>{{this.burger_name}}</button>
+    {{/if}}
+    {{/each}}
+  </div>
+
+
+</div>
