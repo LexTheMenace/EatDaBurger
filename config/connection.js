@@ -17,6 +17,3 @@ connection.connect(function (err) {
 });
 
 module.exports = connection;
-
-
-mysql://:@/?reconnect=true
