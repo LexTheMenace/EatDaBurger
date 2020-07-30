@@ -1,18 +1,18 @@
-const connection = require("./connection");
+var connection = require("./connection");
 function printQuestionMarks(num) {
-  const arr = [];
+  var arr = [];
 
-  for (let i = 0; i < num; i++) {
+  for (var i = 0; i < num; i++) {
     arr.push("?");
   }
   return arr.toString();
 }
 
 function objToSql(ob) {
-  const arr = [];
+  var arr = [];
 
-  for (const key in ob) {
-    let value = ob[key];
+  for (var key in ob) {
+    var value = ob[key];
 
     if (Object.hasOwnProperty.call(ob, key)) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
@@ -24,18 +24,18 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-const orm = {
-  selectAll: function(tableInput, cb) {
-    const queryString = "SELECT * FROM " + tableInput + ";";
-    connection.query(queryString, (err, result) => {
+var orm = {
+  selectAll: function (tableInput, cb) {
+    var queryString = "SELECT * FROM " + tableInput + ";";
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
   },
-  insertOne: function(table, cols, vals, cb) {
-    let queryString = "INSERT INTO " + table;
+  insertOne: function (table, cols, vals, cb) {
+    var queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
@@ -46,7 +46,7 @@ const orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, (err, result) => {
+    connection.query(queryString, vals, function (err, result) {
       if (err) {
         throw err;
       }
@@ -55,8 +55,8 @@ const orm = {
     });
   },
 
-  updateOne: function(table, objColVals, condition, cb) {
-    let queryString = "UPDATE " + table;
+  updateOne: function (table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table;
     //set __ where __
     queryString += " SET ";
     queryString += objToSql(objColVals);
@@ -64,7 +64,7 @@ const orm = {
     queryString += condition;
 
     console.log(queryString);
-    connection.query(queryString, (err, result) => {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }

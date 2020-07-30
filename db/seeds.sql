@@ -1,4 +1,4 @@
-USE heroku_d17f969daa1a53a;
+USE burgers_db;
 
 INSERT INTO burgers (burger_name) VALUES ('Southwest Burger');
 
