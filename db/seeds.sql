@@ -1,4 +1,4 @@
-USE burgers_db;
+USE cmb8vgqqs7zag0kn;
 
 INSERT INTO burgers (burger_name) VALUES ('Southwest Burger');
 
