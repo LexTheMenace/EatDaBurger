@@ -8,7 +8,7 @@ Live Site: https://vast-refuge-55380.herokuapp.com/
 
 
 ## Image
-![CODE QUIZ SCREENSHOT](https://raw.githubusercontent.com/LexTheMenace/CodeQuiz/master/Assets/images/Screenshot%20(57).png)
+![EatDaBurgerScreenshot](https://github.com/LexTheMenace/EatDaBurger/blob/master/Annotation%202020-07-31%20214307.png)
 
 ## Usage
 
